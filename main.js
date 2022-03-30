@@ -1,4 +1,6 @@
-img = document.getElementById("img");
+
+
+getImg();
 
 function getImg(){
     $.ajax({
@@ -9,7 +11,8 @@ function getImg(){
         crossDomain: true,
 
         complete: function(data){
-            console.log(data.message)
+            console.log(data.responseJSON.message)
+            img = data.responseJSON.message;
         }
 
 
